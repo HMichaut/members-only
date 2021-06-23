@@ -1,0 +1,22 @@
+<h1>New Post</h1>
+
+  <div>
+    <ul>
+      <% @post.errors.full_messages_for(:title).each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      <% @post.errors.full_messages_for(:body).each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+
+<%= form_with model: @post do |form| %>
+  <%= form.label :title, "Your title here:" %>
+  <%= form.text_field :title, placeholder: "Title" %>
+  <br><br>
+  <%= form.label :body, "Your post body here:" %>
+  <%= form.text_field :body, placeholder: "Post body" %>
+  <br><br>
+  <%= form.submit "Submit" %>
+<% end %>
