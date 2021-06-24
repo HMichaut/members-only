@@ -5,12 +5,12 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.input :name, required: true, autofocus: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+    <%= f.text_field :name, required: true, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.input :username, required: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+    <%= f.text_field :username, required: true %>
   </div>
 
   <div class="field">
