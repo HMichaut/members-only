@@ -36,10 +36,10 @@
         <div id="navbarExample" class="navbar-menu">
           <div class="navbar-end">
             <div class="field is-grouped">
-              <p class="control">
-                <%= link_to 'New Post', new_post_path, class: "button is-info is-inverted" %>
-              </p>
               <% if user_signed_in? %>
+                <p class="control">
+                  <%= link_to 'New Post', root_path, class: "button is-info is-inverted" %>
+                </p>
                 <p class="control">
                   <%= link_to current_user.name, edit_user_registration_path, class: "button is-info" %>
                 </p>

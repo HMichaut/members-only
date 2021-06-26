@@ -1,14 +1,11 @@
-<h1>Posts</h1>
-
-<div>
-  <% @posts.each do |post| %>
-    <div>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
       <% if user_signed_in? %>
-       <div><%= post.user.username %></div>
+        <%= render 'profile' %>
       <% end %>
-      <div><%= post.title %></div>
-      <div><%= post.body %></div>
-      <br><br>
+      <%= render 'feed' %>
     </div>
-  <% end %>
-</div>
+  </div>
+</section>
+
